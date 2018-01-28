@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    *{margin:0;padding:0;}
+    *{box-sizing:border-box;}
+    *::before{box-sizing:border-box;}
+    *::after{box-sizing:border-box;}
+    body{
+      background:#FFE600;
+      display:flex;
+      justify-content:center;
+      align-items: center;
+      min-height:100vh
+    }
+   
+    .container{
+      border:1px solid red;
+      width:460px;
+      height:300px;
+      position:relative;
+      
+    }
+    .nose{
+      border-radius:50%;
+      border:15px solid transparent;
+      border-top-color:black;
+      position:absolute;
+      left:50%;
+      top:100px;
+      margin-left:-15px;
+    }
+    .eye::before{
+      content:'';
+      display:block;
+      width:30px;
+      height:30px;
+      background:white;
+      border-radius:50%;
+      border:2px solid black;
+      position:absolute;
+      top:0;
+      left:6px;
+    }
+    .eye{
+      position:absolute;
+      height:60px;
+      width:60px;
+      background: #2E2E2E;
+      border-radius:50%; 
+      border:3px solid black;
+      top:65px;
+    }
+    .eye-left{
+      left:50%;  
+      margin-left:90px;
+    }
+    .eye-right{
+      right:50%;
+      margin-right:90px;
+    }
+    .face{
+      height:90px;
+      width:90px;
+      background:red;
+      border-radius:50%;
+      border:3px solid black;
+      position:absolute;
+      top:160px;
+    }
+    .face-left{
+      right:50%;
+      margin-right:130px
+    }
+    .face-right{
+      left:50%;
+      margin-left:130px;
+    }
+    .upperLip{
+      position:absolute;
+      top:110px;
+      display:flex;
+      justify-content:center;
+      width:100%;
+    }
+    .upperLip::before{
+      content:'';
+      display:block;
+      right:50%;
+      height:30px;
+      width:80px;
+      border:3px solid black;
+      border-top:none;
+      border-right:none;
+      border-bottom-left-radius:50px 30px; 
+      transform:rotate(-20deg);
+    }
+      .upperLip::after{
+      content:'';
+      display:block;
+      left:50%;
+      height:30px;
+      width:80px;
+      border:3px solid black;
+      border-top:none;
+      border-left:none;
+      border-bottom-right-radius:50px 30px; 
+      transform:rotate(20deg);
+    }
+    .lowerLip-wrapper{
+      width:100%;
+      height:200px;
+      border:1px solid black;
+      overflow:hidden;
+    }
+    .lowerLip{
+      position: absolute;
+      bottom:0;
+      height:500px;
+      width:200px;
+      background:red;
+      left:50%;
+      margin-left:-100px;
+      top:-200px;
+      border-bottom-right-radius:80px 500px;
+      border-bottom-left-radius:80px 500px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nose"></div>
+    <div class="eye eye-left"></div>
+    <div class="eye eye-right"></div>
+    <div class="face face-left"></div>
+    <div class="face face-right"></div>
+    <div class="upperLip"></div>
+    <div class="lowerLip-wrapper">
+      <div class="lowerLip"></div>
+    </div>
+  </div>
+
+</body>
+</html>
