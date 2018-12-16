@@ -1,0 +1,105 @@
+*{margin:0;padding:0;}
+*{box-sizing: border-box;}
+*::before{box-sizing: border-box;}
+*::after{box-sizing: border-box;}
+body{
+position: relative;
+  background: #FFE600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  animation: all 0.3s;
+}
+.faceWrapper{
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+.process{
+    position: relative;
+    width: 240px;
+    height: 8px;
+    border-radius: 4px;
+    background: #FF0000;;
+    border:2px solid black;
+    margin: 0 12px;
+}
+#ball{
+    position: absolute;
+    top:-8px;
+    left:-10px;
+    background: url('./pokeball.png') center no-repeat;
+    background-size: cover;
+    width:20px;
+    height:20px;
+}
+#container{
+    height: 300px;
+    width: 460px;
+    position: relative;
+}
+#control{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#control .icon{
+    width: 24px; height: 24px;
+    vertical-align: -0.15em;
+    fill: black;
+    overflow: hidden;
+    
+ }
+#pause{
+    display: none;
+}
+#play:hover,
+#pause:hover,
+#replay:hover{
+     cursor: pointer;
+ }
+ .replay{
+    animation: replay 1s;
+ }
+@keyframes replay{
+    0%{
+        transform: rotateZ(0deg)
+    }
+    100%{
+        transform: rotateZ(360deg)
+    }
+}
+
+#nose:hover{
+    animation: 0.1s shake 0s infinite alternate ;
+}
+
+@keyframes shake{
+    0% {
+      transform: rotateZ(-3deg);
+    }
+    100%{
+      transform: rotateZ(3deg);
+    }
+}
+@keyframes whiteInEye{
+    0%{
+        top: 0px;
+        left: 5px;
+    }
+    50%{
+        top: 0;
+        left: 6px;
+    }
+    100%{
+        top: 0px;
+        left: 7px;
+    }
+}
