@@ -120,15 +120,16 @@ let speedValue=15
 let end=false
 let firstPlay=true
 styleTag.innerHTML=face
+let bar=document.querySelector('#innerBar')
 let id=setInterval(() => {
     if(isPlay){
         if(n<face.length){
-            console.log(1)
             styleTag.innerHTML=face.substring(0,n+1)  
             n+=1
-            posX=236*n/face.length-10
-            ball.setAttribute('style',
-            'left:' +posX+'px;')
+            posX=236*n/face.length
+            console.log(posX)
+            bar.setAttribute('style',
+            'width:' +posX+'px;')
         }else{
             play.setAttribute('style','display:inline-block;')
             pause.setAttribute('style','display:none;')
